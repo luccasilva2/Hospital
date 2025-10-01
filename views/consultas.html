@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidades LSO</title>
+    <script src="../src/js/script.js" defer></script>
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+
+   <header>
+    <img src="../src/img/logo.png" alt="Banner do Hospital" class="logo">
+    <div class="menu">
+      <h1>Hospital LSO</h1>
+      <nav>
+        <a href="../views/consultas.html">Consultas</a>
+        <a href="../views/especialidades.html">Especialidades</a>
+        <a href="../views/pacientes.html">Pacientes</a>
+        <a href="../views/medicos.html">Médicos</a>
+      </nav>
+  </div>
+  </header>
+
+<body>
+    <section class="carousel">
+      <h2>Galeria de Fotos</h2>
+      <div class="carousel-container">
+        <img src="../src/img/img1.png" alt="Imagem 1">
+        <img src="../src/img/img2.png" alt="Imagem 2">
+        <img src="../src/img/img3.png" alt="Imagem 3">
+        <img src="../src/img/img4.png" alt="Imagem 4">
+        <img src="../src/img/img5.png" alt="Imagem 5">
+        <img src="../src/img/img6.png" alt="Imagem 6">
+      </div>
+      <div class="indicators"></div>
+      <button class="prev">Anterior</button>
+      <button class="next">Próximo</button>
+    </section>
+
+    <body>
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilo do menu */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px; /* escondido por padrão */
+      width: 250px;
+      height: 100%;
+      background: #222;
+      color: white;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.5);
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* Botão para abrir/fechar */
+    .toggle-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #222;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+    /* Quando ativo */
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* Conteúdo principal */
+    .content {
+      margin-left: 0;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    .content.shift {
+      margin-left: 250px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn">☰ Menu</button>
+
+  <div class="sidebar" id="sidebar">
+    <a href="consultas.html">🔍 Consultas</a>
+    <a href="especialidades.html">📕 Especialidades</a>
+    <a href="medicos.html">🧑🏻‍⚕️ Médicos</a>
+    <a href="pacientes.html">🧑🏻 Pacientes</a>
+  </div>
+
+  <div class="content" id="content">
+    <h1>Bem-vindo!</h1>
+    <p>Esse é um exemplo de menu lateral com HTML, CSS e JavaScript.</p>
+  </div>
+
+  <script>
+    const btn = document.querySelector('.toggle-btn');
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('content');
+
+    btn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      content.classList.toggle('shift');
+    });
+  </script>
+  </body>
+
+</body>
+</html>
