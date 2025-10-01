@@ -1,176 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades LSO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pacientes - Hospital LSO</title>
     <script src="../src/js/script.js" defer></script>
-    <link rel="stylesheet" href="../src/css/style.css">
-</head>
-
-   <header>
-    <img src="../src/img/logo.png" alt="Banner do Hospital" class="logo">
-    <div class="menu">
-      <h1>Hospital LSO</h1>
-  </div>
-  </header>
-
-<body>
-    <div class="tabs">
-      <button onclick="openTab(event,'listaPessoas')">Lista</button>
-      <button onclick="openTab(event,'cadastroPessoas')">Cadastrar</button>
-      <button onclick="openTab(event,'pesquisaPessoas')">Pesquisar</button>
-    </div>
-
-    <section id="listaPessoas" class="tab-content">
-      <h2>Pessoas Cadastradas</h2>
-      <section class = 'bloco'>
-      <ul>
-        <li>Pedro Marciniak</li>
-        <li>Lucca Silva</li>
-        <li>Amanda Adames</li>
-        <li>Ana Boni</li>
-      </ul>
-    </section>
-    </section>
-
-    <section id="cadastroPessoas" class="tab-content" style="display:none;">
-      <h2>Cadastrar Pesooas</h2>
-      <form>
-        <label>Nome: <input type="text"></label><br>
-        <label>Sexo:
-          <select>
-            <option>Masculino</option>
-            <option>Feminino</option>
-            <option>Prefiro não responder</option>
-          </select>
-        </label><br>
-        <label>Idade: <input type="number" min="1" max="60"></label><br>
-        <label>CPF: <input type="number"></label><br>
-        <label>Endereço: <input type="text"></label><br>
-        <label>Função: 
-            <select>
-                <option>Adm</option>
-                <option>Professor</option>
-                <option>Aluno</option>
-            </select>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
-
-    <section id="pesquisaPessoas" class="tab-content" style="display:none;">
-      <h2>Pesquisar Pessoa</h2>
-      <section class = 'bloco'>
-      <input type="text" placeholder="Digite o nome da Pessoa">
-      <button>Buscar</button>
-      </section>
-    </section>
-  </main>
-
-      <section class="carousel">
-      <h2>Fotos de nossos pacientes</h2>
-      <div class="carousel-container">
-        <img src="../src/img/img1.png" alt="Imagem 1">
-        <img src="../src/img/img2.png" alt="Imagem 2">
-        <img src="../src/img/img3.png" alt="Imagem 3">
-        <img src="../src/img/img4.png" alt="Imagem 4">
-        <img src="../src/img/img5.png" alt="Imagem 5">
-        <img src="../src/img/img6.png" alt="Imagem 6">
-      </div>
-      <div class="indicators"></div>
-      <button class="prev">Anterior</button>
-      <button class="next">Próximo</button>
-    </section>
-
-</body>
-
-  <body>
-   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Estilo do menu */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px; /* escondido por padrão */
-      width: 250px;
-      height: 100%;
-      background: #222;
-      color: white;
-      padding-top: 60px;
-      transition: left 0.3s ease;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.5);
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .sidebar a:hover {
-      background: #444;
-    }
-
-    /* Botão para abrir/fechar */
-    .toggle-btn {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: #222;
-      color: white;
-      border: none;
-      font-size: 18px;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 1000;
-    }
-
-    /* Quando ativo */
-    .sidebar.active {
-      left: 0;
-    }
-
-    /* Conteúdo principal */
-    .content {
-      margin-left: 0;
-      padding: 20px;
-      transition: margin-left 0.3s;
-    }
-
-    .content.shift {
-      margin-left: 250px;
-    }
-  </style>
+    <link rel="stylesheet" href="../src/css/style.css" />
 </head>
 <body>
+    <header>
+        <img src="../src/img/logo.png" alt="Logo Hospital LSO" class="logo" />
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="consultas.html">Consultas</a>
+            <a href="especialidades.html">Especialidades</a>
+            <a href="medicos.html">Médicos</a>
+            <a href="pacientes.html" class="active">Pacientes</a>
+        </nav>
+    </header>
 
-  <button class="toggle-btn">☰ Menu</button>
+    <main>
+        <section class="sobre">
+            <h2>Área dos Pacientes</h2>
+            <p>Gerencie suas informações e histórico médico.</p>
+        </section>
 
-  <div class="sidebar" id="sidebar">
-    <a href="consultas.html">🔍 Consultas</a>
-    <a href="especialidades.html">📕 Especialidades</a>
-    <a href="medicos.html">🧑🏻‍⚕️ Médicos</a>
-    <a href="pacientes.html">🧑🏻 Pacientes</a>
-  </div>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'listaPessoas')">Lista de Pacientes</button>
+            <button class="tab-button" onclick="openTab(event, 'cadastroPessoas')">Cadastrar Paciente</button>
+            <button class="tab-button" onclick="openTab(event, 'pesquisaPessoas')">Pesquisar Paciente</button>
+        </div>
 
-  <script>
-    const btn = document.querySelector('.toggle-btn');
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
+        <section id="listaPessoas" class="tab-content">
+            <h2>Pacientes Cadastrados</h2>
+            <div class="bloco">
+                <ul>
+                    <li>Pedro Marciniak</li>
+                    <li>Lucca Silva</li>
+                    <li>Amanda Adames</li>
+                    <li>Ana Boni</li>
+                </ul>
+            </div>
+        </section>
 
-    btn.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-      content.classList.toggle('shift');
-    });
-  </script>
-  </body>
+        <section id="cadastroPessoas" class="tab-content" style="display: none;">
+            <h2>Cadastrar Paciente</h2>
+            <form class="bloco">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite o nome" required />
 
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Prefiro não responder</option>
+                </select>
+
+                <label for="idade">Idade:</label>
+                <input id="idade" type="number" name="idade" min="1" max="120" placeholder="Digite a idade" required />
+
+                <label for="cpf">CPF:</label>
+                <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF" required />
+
+                <label for="endereco">Endereço:</label>
+                <input id="endereco" type="text" name="endereco" placeholder="Digite o endereço" required />
+
+                <label for="telefone">Telefone:</label>
+                <input id="telefone" type="tel" name="telefone" placeholder="Digite o telefone" />
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="pesquisaPessoas" class="tab-content" style="display: none;">
+            <h2>Pesquisar Paciente</h2>
+            <div class="bloco">
+                <input type="text" id="search-input" placeholder="Digite o nome do paciente" />
+                <button onclick="searchPatient()">Buscar</button>
+                <div id="search-results"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hospital LSO. Todos os direitos reservados.</p>
+        <p>Contato: (11) 1234-5678 | hospital@lso.com</p>
+    </footer>
 </body>
 </html>

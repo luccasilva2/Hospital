@@ -1,40 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades LSO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro - Hospital LSO</title>
     <script src="../src/js/script.js" defer></script>
-    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css" />
 </head>
-
-   <header>
-    <img src="../src/img/logo.png" alt="Banner do Hospital" class="logo">
-    <div class="menu">
-      <h1>Hospital LSO</h1>
-      <nav>
-        <a href="../index.html">Início</a>
-        <a href="../views/consultas.html">Consultas</a>
-        <a href="../views/especialidades.html">Especialidades</a>
-        <a href="../views/pacientes.html">Pacientes</a>
-      </nav>
-  </div>
-  </header>
-
 <body>
-    <section class="carousel">
-      <h2>Galeria de Fotos</h2>
-      <div class="carousel-container">
-        <img src="../src/img/img1.png" alt="Imagem 1">
-        <img src="../src/img/img2.png" alt="Imagem 2">
-        <img src="../src/img/img3.png" alt="Imagem 3">
-        <img src="../src/img/img4.png" alt="Imagem 4">
-        <img src="../src/img/img5.png" alt="Imagem 5">
-        <img src="../src/img/img6.png" alt="Imagem 6">
-      </div>
-      <div class="indicators"></div>
-      <button class="prev">Anterior</button>
-      <button class="next">Próximo</button>
-    </section>
+    <main>
+        <section class="welcome">
+            <h1>Junte-se ao Hospital LSO</h1>
+            <p>Registre-se para acessar nossos serviços de saúde.</p>
+        </section>
+
+        <section class="bloco">
+            <h2>Registro</h2>
+            <form>
+                <label for="nome">Nome Completo:</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required />
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email" placeholder="Digite seu email" required />
+
+                <label for="senha">Senha:</label>
+                <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required />
+
+                <label for="confirmar-senha">Confirmar Senha:</label>
+                <input id="confirmar-senha" type="password" name="confirmar-senha" placeholder="Confirme sua senha" required />
+
+                <label for="telefone">Telefone:</label>
+                <input id="telefone" type="tel" name="telefone" placeholder="Digite seu telefone" />
+
+                <button type="submit">Registrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="../index.html">Faça login</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hospital LSO. Todos os direitos reservados.</p>
+        <p>Contato: (11) 1234-5678 | hospital@lso.com</p>
+    </footer>
 </body>
 </html>

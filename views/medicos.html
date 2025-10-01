@@ -1,123 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades LSO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Médicos - Hospital LSO</title>
     <script src="../src/js/script.js" defer></script>
-    <link rel="stylesheet" href="../src/css/style.css">
-</head>
-
-   <header>
-    <img src="../src/img/logo.png" alt="Banner do Hospital" class="logo">
-    <div class="menu">
-      <h1>Hospital LSO</h1>
-  </div>
-  </header>
-
-<body>
-    <section class="carousel">
-      <h2>Galeria de Fotos</h2>
-      <div class="carousel-container">
-        <img src="../src/img/img1.png" alt="Imagem 1">
-        <img src="../src/img/img2.png" alt="Imagem 2">
-        <img src="../src/img/img3.png" alt="Imagem 3">
-        <img src="../src/img/img4.png" alt="Imagem 4">
-        <img src="../src/img/img5.png" alt="Imagem 5">
-        <img src="../src/img/img6.png" alt="Imagem 6">
-      </div>
-      <div class="indicators"></div>
-      <button class="prev">Anterior</button>
-      <button class="next">Próximo</button>
-    </section>
-
-    <body>
-    <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Estilo do menu */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px; /* escondido por padrão */
-      width: 250px;
-      height: 100%;
-      background: #222;
-      color: white;
-      padding-top: 60px;
-      transition: left 0.3s ease;
-      box-shadow: 2px 0 8px rgba(0,0,0,0.5);
-    }
-
-    .sidebar a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .sidebar a:hover {
-      background: #444;
-    }
-
-    /* Botão para abrir/fechar */
-    .toggle-btn {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: #222;
-      color: white;
-      border: none;
-      font-size: 18px;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 1000;
-    }
-
-    /* Quando ativo */
-    .sidebar.active {
-      left: 0;
-    }
-
-    /* Conteúdo principal */
-    .content {
-      margin-left: 0;
-      padding: 20px;
-      transition: margin-left 0.3s;
-    }
-
-    .content.shift {
-      margin-left: 250px;
-    }
-  </style>
+    <link rel="stylesheet" href="../src/css/style.css" />
 </head>
 <body>
+    <header>
+        <img src="../src/img/logo.png" alt="Logo Hospital LSO" class="logo" />
+        <nav>
+            <a href="../index.html">Início</a>
+            <a href="consultas.html">Consultas</a>
+            <a href="especialidades.html">Especialidades</a>
+            <a href="medicos.html" class="active">Médicos</a>
+            <a href="pacientes.html">Pacientes</a>
+        </nav>
+    </header>
 
-  <button class="toggle-btn">☰ Menu</button>
+    <main>
+        <section class="sobre">
+            <h2>Nossos Médicos</h2>
+            <p>Conheça nossa equipe de profissionais dedicados à sua saúde.</p>
+        </section>
 
-  <div class="sidebar" id="sidebar">
-    <a href="consultas.html">🔍 Consultas</a>
-    <a href="especialidades.html">📕 Especialidades</a>
-    <a href="medicos.html">🧑🏻‍⚕️ Médicos</a>
-    <a href="pacientes.html">🧑🏻 Pacientes</a>
-  </div>
+        <section class="carousel">
+            <h2>Galeria de Fotos</h2>
+            <div class="carousel-container">
+                <img src="../src/img/img1.png" alt="Imagem 1" />
+                <img src="../src/img/img2.png" alt="Imagem 2" />
+                <img src="../src/img/img3.png" alt="Imagem 3" />
+                <img src="../src/img/img4.png" alt="Imagem 4" />
+                <img src="../src/img/img5.png" alt="Imagem 5" />
+                <img src="../src/img/img6.png" alt="Imagem 6" />
+            </div>
+            <div class="indicators"></div>
+            <button class="prev">Anterior</button>
+            <button class="next">Próximo</button>
+        </section>
 
-  <script>
-    const btn = document.querySelector('.toggle-btn');
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
+        <section class="destaques">
+            <h2>Especialidades Médicas</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Dr. João Silva</h3>
+                    <p>Cardiologista com 10 anos de experiência.</p>
+                </div>
+                <div class="card">
+                    <h3>Dra. Maria Oliveira</h3>
+                    <p>Ortopedista especializada em coluna vertebral.</p>
+                </div>
+                <div class="card">
+                    <h3>Dr. Carlos Souza</h3>
+                    <p>Pediatra dedicado ao cuidado infantil.</p>
+                </div>
+                <div class="card">
+                    <h3>Dra. Ana Costa</h3>
+                    <p>Ginecologista com foco em saúde da mulher.</p>
+                </div>
+                <div class="card">
+                    <h3>Dr. Pedro Lima</h3>
+                    <p>Oftalmologista com vasta experiência em cirurgias.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    btn.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-      content.classList.toggle('shift');
-    });
-  </script>
-  </body>
-
+    <footer>
+        <p>&copy; 2023 Hospital LSO. Todos os direitos reservados.</p>
+        <p>Contato: (11) 1234-5678 | hospital@lso.com</p>
+    </footer>
 </body>
 </html>
